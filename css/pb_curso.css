@@ -1,0 +1,153 @@
+/* Aplicamos box-sizing a elementos que pueden desbordarse */
+.course-detail-container, .course-description-container, .course-index-container, .registration-form {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    min-height: 100vh;
+}
+
+.course-detail-container {
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 5px;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 20px auto; /* Centra el contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en filas adicionales si es necesario */
+}
+
+.course-description-container {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.course-index-container {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #325bef70;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.course-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #325aef;
+    text-align: center;
+}
+
+.course-index h2 {
+    font-size: 24px;
+    color: #325aef;
+    margin-bottom: 10px;
+}
+
+.course-index ul {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+.course-index ul li {
+    margin: 5px 0;
+}
+
+.course-price h2 {
+    font-size: 24px;
+    color: #c5168b;
+    margin-top: 20px;
+}
+
+.course-price p {
+    font-size: 20px;
+    color: #c5168b;
+}
+
+.registration-form {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+.registration-form h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registration-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="tel"],
+.registration-form input[type="email"],
+.registration-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+.registration-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.registration-form input[type="submit"]:hover {
+    background-color: #1a252f;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 768px) {
+    .course-detail-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .course-description-container, .course-index-container {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .course-description-container {
+        padding: 20px;
+    }
+
+    .course-index-container {
+        padding: 15px;
+    }
+
+    .registration-form {
+        padding: 15px;
+    }
+}
+
